@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./Room.css";
 /* The variable updatation of isLit if is done by simmple isLit = !isLit then it will update value but not the UI.
 This is where Libraries like Reac, Angular etc come in handy.*/
 
@@ -18,11 +18,13 @@ function Room() {
   //   setAge(++age);
   // };
   return (
-    <div>
+    <div className={`room ${isLit ? "Lit" : "dark"}`}>
       This Room is {isLit ? "Lit" : "Dark"}
       <br />
       Age = {age}
       <br />
+      {/* The reason for calling fucntion inside another function (i.e Arrow) is that if we provide this function 
+      directly then it will b called upon intializing of the button not on click event   */}
       <button onClick={() => setLit(!isLit)}>Toggle Click</button>
       <br />
       <button
