@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
-import Room from "./Room.js";
+import Assig from "./Assig.js";
 function App() {
   return (
     <div>
-      <Room></Room>
+      <Assig></Assig>
     </div>
   );
 }
